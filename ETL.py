@@ -71,5 +71,6 @@ def save_csv(base):
 # Ejecutar todo
 cards_list = read_api()
 base = parse_json_to_dataframe(cards_list, df)
+base["date_updated"] = date.today()
 print(base.head())
 save_csv(base)
